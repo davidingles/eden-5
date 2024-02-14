@@ -1,0 +1,76 @@
+---
+import Navbar from './Navbar.astro'
+import SliderToggleTheme from '../botones-sliders/SliderToggleTheme.astro'
+
+const nav = ['Inicio', 'Quiénes somos', 'Contacto', 'Catálogo']
+const link = ['/', '/#nave', '/#contacto', '/catalogo']
+---
+
+<div class='flex border-8 border-green-300 bg-[#202020] david'>
+	<!-- LOGO DE LA AUXILIAR ======================================= -->
+	<div
+		class='relative w-[20%] md:w-[20%] h-16 flex justify-start items-start transition-all .5s hover:scale-105'
+	>
+		<div class='logo-grande absolute top-0 left-0 p-2 border-2'>
+			<a href='/'
+				><img
+					src='/svg/logo-aux-torres-01.svg'
+					alt='L'
+				/></a
+			>
+		</div>
+	</div>
+	<!-- NAVBAR INCLUYENDO EL SOL Y LA LUNA DEL TEMA================  -->
+	<nav class='flex flex-row flex-grow items-center justify-center'>
+		<div class='relative flex flex-grow h-full'>
+			<div class='david bg-[#202020] absolute top-0 right-0 w-full p-2'>
+				<Navbar
+					title={nav}
+					link={link}
+				/>
+			</div>
+		</div>
+
+		<div class='relative h-full w-[10%]'>
+			<div class='absolute top-2 right-4 z-20'>
+				<SliderToggleTheme />
+			</div>
+		</div>
+	</nav>
+</div>
+
+<style>
+	.logo-grande {
+		animation-name: fadeInLeft;
+		animation-duration: 0.8s;
+		animation-fill-mode: both;
+		max-width: 111px;
+	}
+
+	@keyframes fadeInLeft {
+		from {
+			opacity: 0;
+			transform: translate3d(-100%, 0, 0);
+		}
+
+		to {
+			opacity: 1;
+			transform: translate3d(0, 0, 0);
+		}
+	}
+
+	.fadeInLeft {
+		animation-name: fadeInLeft;
+	}
+
+	.fadeInLeft {
+		/* animation-duration: 1s; */
+		animation-fill-mode: both;
+	}
+</style>
+
+<style>
+	:global(.light) .david {
+		background-color: #f2f2f2;
+	}
+</style>

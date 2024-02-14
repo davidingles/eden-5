@@ -1,0 +1,48 @@
+---
+import LayMovil from '@/components/LayMovil.astro'
+import LayPantalla from '@/components/LayPantalla.astro'
+import { View } from '@react-three/drei'
+import { ViewTransitions } from 'astro:transitions'
+interface Props {
+	title: string
+}
+
+const { title } = Astro.props
+---
+
+<html lang='es'>
+	<head>
+		<meta charset='UTF-8' />
+		<meta
+			name='description'
+			content='Astro description'
+		/>
+		<meta
+			name='viewport'
+			content='width=device-width'
+		/>
+		<link
+			rel='icon'
+			type='image/svg+xml'
+			href='/svg/favicon.auxiliar.svg'
+		/>
+		<meta
+			name='generator'
+			content={Astro.generator}
+		/>
+		<title>{title}</title>
+		<ViewTransitions />
+	</head>
+	<body class='body dil-barra-desplazamiento'>
+		<div class='lay-pantalla'>
+			<LayPantalla>
+				<slot />
+			</LayPantalla>
+		</div>
+		<div class='lay-movil'>
+			<LayMovil>
+				<slot />
+			</LayMovil>
+		</div>
+	</body>
+</html>

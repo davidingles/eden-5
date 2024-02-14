@@ -1,0 +1,42 @@
+---
+
+---
+
+<section class='heroes'>
+	<img src='/img/cielo.jpg' />
+	<img src='/img/nave.jpg' />
+	<img src='/img/lunes.jpg' />
+	<img src='/img/miercoles.jpg' />
+</section>
+
+<style>
+	.heroes {
+		display: flex;
+		width: 600px;
+		height: 555px;
+	}
+	section img {
+		width: 0px;
+		height: 100%;
+		flex-grow: 1;
+		object-fit: cover;
+		opacity: 0.8;
+		transition: all 0.5s ease;
+	}
+	section img:hover {
+		opacity: 1;
+		cursor: crosshair;
+		width: 450px;
+		opacity: 1;
+		filter: contrast(1.2);
+	}
+	@media screen and (min-width: 1200px) {
+		.heroes {
+			width: 1000px;
+			height: 100%;
+		}
+		section img:hover {
+			width: 600px;
+		}
+	}
+</style>

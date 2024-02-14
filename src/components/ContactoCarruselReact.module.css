@@ -1,0 +1,93 @@
+.btn {
+  /* border: 3px solid #666; */
+  color: #666;
+  padding: .5rem;
+  border-radius: .5rem;
+  box-shadow: 2px 2px 11px 2px rgb(0 0 0 / 20%);
+  transition: all .3s ease;
+}
+
+.btn:hover {
+  box-shadow: 1px 1px 2px 2px rgb(0 0 0 / 10%);
+}
+
+.foto,
+.loaded {
+  object-fit: contain;
+  border-radius: 1rem;
+  width: auto;
+  height: auto;
+}
+
+.foto {
+  opacity: .1;
+}
+
+.loaded {
+  transition: all 1.5s ease;
+  opacity: 1;
+}
+
+.thumbnail,
+.thumbnail2 {
+  border: solid 1px white;
+  border-radius: .5rem;
+  width: 222px;
+  height: auto;
+  overflow: hidden;
+
+}
+
+.thumbnail {
+  border: rgb(247, 215, 87) solid 2px;
+  box-shadow: 1px 1px 2px 1px rgb(0 0 0 / 20%);
+
+}
+
+.thumbnail2 {
+  /* transition: all .3s ease; */
+  box-shadow: 1px 1px 12px 1px rgb(0 0 0 / 40%);
+}
+
+.thumbnail2:hover {
+  border: rgb(247, 215, 87) solid 2px;
+}
+
+.dav,
+.david {
+  position: absolute;
+  top: 0;
+  left: 50%;
+  transform: translate(-50%, 0px);
+  color: black;
+  width: 100%;
+  text-align: center;
+}
+
+.dav:hover,
+.david:hover {
+  color: red;
+  border: solid 1px;
+}
+
+.dav {
+  color: black;
+  background-color: rgb(255, 255, 255);
+}
+
+.david {
+  font-weight: bold;
+  background-color: rgb(247, 215, 87);
+
+}
+
+.contenedorImagen {
+  display: flex;
+  flex-direction: row;
+}
+
+@media (max-width: 1250px) {
+  .contenedorImagen {
+    flex-direction: column;
+  }
+}

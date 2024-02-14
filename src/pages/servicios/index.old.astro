@@ -1,0 +1,192 @@
+---
+import Layout from '@/layouts/Layout.astro'
+import SeccionVideos from '@/components/secciones/SeccionVideos.astro'
+import LogoFlechaSube from '@/components/icons/LogoFlechaSube.astro'
+---
+
+<script>
+	document.addEventListener('DOMContentLoaded', (event) => {
+		document.querySelectorAll('a[href^="#"]').forEach((anchor) => {
+			anchor.addEventListener('click', function (e) {
+				e.preventDefault()
+
+				document.querySelector(this.getAttribute('href')).scrollIntoView({
+					behavior: 'smooth',
+				})
+			})
+		})
+	})
+</script>
+<Layout title='Servicios de la Auxiliar'>
+	<main class='relative flex flex-col overflow-y-auto'>
+		<div
+			class='absolute top-0 left-0 h-[111px] w-[full] bg-slate-500 -translate-y-[111px]'
+			id='ancla_botonera'
+		>
+			PRUEBA
+		</div>
+		<!-- botonera================================== -->
+		<div class='mb-8 flex flex-row w-full'>
+			<a
+				class='opts'
+				href='#impresora'
+			>
+				Impresión</a
+			>
+			<a
+				class='opts'
+				href='#troqueladora'
+			>
+				Troquelado</a
+			>
+			<a
+				class='opts'
+				href='#pegadora'
+			>
+				Pegado</a
+			>
+			<a
+				class='opts'
+				href='#ploter'
+			>
+				Corte-Digital</a
+			>
+		</div>
+		<!-- videos================================== -->
+		<div
+			class='flex flex-col justify-center items-center overflow-y-auto gap-16'
+		>
+			<!-- video impresora================================== -->
+			<div
+				id='impresora'
+				class='w-[66%] flex flex-row items-center mb-4 relative rounded-lg bordeRojo'
+			>
+				<video
+					autoplay
+					loop
+					muted
+					class='relative w-full aspect-square object-cover flex flex-col justify-center items-center rounded-lg m-2'
+				>
+					<source src='/videos/videosServicios/videoImpresora2.webm' />
+				</video>
+				<span
+					class='flex justify-center shadow-lg w-[55%] bg-white bg-opacity-80 rounded-lg p-4 absolute top-8 left-6 z-10'
+				>
+					Impresora 3 colores...
+				</span>
+				<a
+					href='#ancla_botonera'
+					class='absolute top-4 right-4 bg-black opacity-70 z-50 rounded-full p-2 [box-shadow: 0 0 10px 0 rgba(0, 0, 0, 0.9)]] border border-opacity-100 border-white hover:opacity-40 cursor-pointer hover:scale-105'
+				>
+					<LogoFlechaSube
+						style='width:33px height:33px'
+						fill='fill:white'
+						stroke='white'
+						strokeWidth='6'
+					/>
+				</a>
+			</div>
+			<!-- video troqueladora================================== -->
+			<div
+				id='troqueladora'
+				class='w-[66%] flex flex-row items-center mb-4 relative rounded-lg bordeRojo'
+			>
+				<video
+					autoplay
+					loop
+					muted
+					class='relative w-full aspect-square object-cover flex flex-col justify-center items-center rounded-lg m-2'
+				>
+					<source src='/videos/videosServicios/vTroqueladora.webm' />
+				</video>
+				<span
+					class='flex justify-center shadow-lg w-[55%] bg-white bg-opacity-80 rounded-lg p-4 absolute top-8 left-6 z-10'
+				>
+					Troqueladora plana...
+				</span>
+				<a
+					href='#ancla_botonera'
+					class='absolute top-4 right-4 bg-black opacity-70 z-50 rounded-full p-2 [box-shadow: 0 0 10px 0 rgba(0, 0, 0, 0.9)]] border border-opacity-100 border-white hover:opacity-40 cursor-pointer hover:scale-105'
+				>
+					<LogoFlechaSube
+						style='width:33px height:33px'
+						fill='fill:white'
+						stroke='white'
+						strokeWidth='6'
+					/>
+				</a>
+			</div>
+			<!-- video pegadora ================================== -->
+			<div
+				id='pegadora'
+				class='w-[66%] flex flex-row items-center mb-4 relative rounded-lg bordeRojo'
+			>
+				<video
+					autoplay
+					loop
+					muted
+					class='relative w-full aspect-square object-cover flex flex-col justify-center items-center rounded-lg m-2'
+				>
+					<source src='/videos/videosServicios/vPegadoraMarron.webm' />
+				</video>
+				<span
+					class='flex justify-center shadow-lg w-[55%] bg-white bg-opacity-80 rounded-lg p-4 absolute top-8 left-6 z-10'
+				>
+					Pegadora...
+				</span>
+				<a
+					href='#ancla_botonera'
+					class='absolute top-4 right-4 bg-black opacity-70 z-50 rounded-full p-2 [box-shadow: 0 0 10px 0 rgba(0, 0, 0, 0.9)]] border border-opacity-100 border-white hover:opacity-40 cursor-pointer hover:scale-105'
+				>
+					<LogoFlechaSube
+						style='width:33px height:33px'
+						fill='fill:white'
+						stroke='white'
+						strokeWidth='6'
+					/>
+				</a>
+			</div>
+			<!-- video ploter ================================== -->
+			<div
+				id='ploter'
+				class='w-[66%] flex flex-row items-center mb-4 relative rounded-lg bordeRojo'
+			>
+				<video
+					autoplay
+					loop
+					muted
+					class='relative w-full aspect-square object-cover flex flex-col justify-center items-center rounded-lg m-2'
+				>
+					<source src='/videos/videosServicios/vPloter.webm' />
+				</video>
+				<span
+					class='flex justify-center shadow-lg w-[55%] bg-white bg-opacity-80 rounded-lg p-4 absolute top-8 left-6 z-10'
+				>
+					Ploter de corte digital...
+				</span>
+				<a
+					href='#ancla_botonera'
+					class='absolute top-4 right-4 bg-black opacity-70 z-50 rounded-full p-2 [box-shadow: 0 0 10px 0 rgba(0, 0, 0, 0.9)]] border border-opacity-100 border-white hover:opacity-40 cursor-pointer hover:scale-105'
+				>
+					<LogoFlechaSube
+						style='width:33px height:33px'
+						fill='fill:white'
+						stroke='white'
+						strokeWidth='6'
+					/>
+				</a>
+			</div>
+		</div>
+	</main>
+</Layout>
+
+<style>
+	.opts {
+		margin-left: 2rem;
+	}
+	:global(.light) .opts {
+	}
+	html {
+		scroll-behavior: smooth;
+	}
+</style>

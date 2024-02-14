@@ -1,0 +1,67 @@
+---
+// ESTE COMPONENTE ES PARA CARGAR LOS COMPONENTES DE TRES DIMENSIONES PUESTO
+// QUE NO SE RECORRER LOS COMPONENTE DE UNA CARPETA
+
+import B1Cerrada from '../three/borrar/B1Cerrada'
+import BandejaAcotada from '../three/borrar/BandejaAcotada'
+import EstucheConAsas from '../three/borrar/EstucheConAsas'
+import Troquel1g0011 from '../three/borrar/Troquel1g0011'
+import Troquel1g0198 from '../three/borrar/Troquel1g0198'
+import Troquel1g0102 from '../three/borrar/Troquel1g0102'
+import Troquel1L0024 from '../three/borrar/Troquel1L0024'
+import Troquel1P0572 from '../three/borrar/Troquel1P0572'
+import TroquelComedero from '../three/borrar/TroquelComedero'
+import TroquelMesaFeria from '../three/borrar/TroquelMesaFeria'
+import TroquelMuebleMadera from '../three/borrar/TroquelMuebleMadera'
+import TroquelMando from '../three/borrar/TroquelMando'
+import TroquelMaleta from '../three/borrar/TroquelMaleta'
+import TroquelCajaB1 from '../three/borrar/TroquelCajaB1'
+import TroquelCaballete from '../three/borrar/TroquelCaballete'
+import Troquel4e0066 from '../three/borrar/Troquel4e0066'
+import Troquel1p0391 from '../three/ReactThreeModel3D'
+import DecoracionArbol from '../three/borrar/DecoracionArbol'
+import Jamonero10 from '../three/borrar/Jamonero10'
+
+const { componente_jsx } = Astro.props
+---
+
+{componente_jsx === 'Jamonero10' ? <Jamonero10 client:visible /> : null}
+{componente_jsx === 'EstucheConAsas' ? <EstucheConAsas client:visible /> : null}
+{componente_jsx === 'BandejaAcotada' ? <BandejaAcotada client:visible /> : null}
+{componente_jsx === 'B1Cerrada' ? <B1Cerrada client:visible /> : null}
+{componente_jsx === 'Troquel1g0011' ? <Troquel1g0011 client:visible /> : null}
+{componente_jsx === 'Troquel1g0198' ? <Troquel1g0198 client:visible /> : null}
+{componente_jsx === 'Troquel1g0102' ? <Troquel1g0102 client:visible /> : null}
+{componente_jsx === 'Troquel1L0024' ? <Troquel1L0024 client:visible /> : null}
+{componente_jsx === 'Troquel1P0572' ? <Troquel1P0572 client:visible /> : null}
+{
+	componente_jsx === 'TroquelComedero' ? (
+		<TroquelComedero client:visible />
+	) : null
+}
+{
+	componente_jsx === 'TroquelMesaFeria' ? (
+		<TroquelMesaFeria client:visible />
+	) : null
+}
+{
+	componente_jsx === 'TroquelMuebleMadera' ? (
+		<TroquelMuebleMadera client:visible />
+	) : null
+}
+{componente_jsx === 'TroquelMando' ? <TroquelMando client:visible /> : null}
+{componente_jsx === 'TroquelMaleta' ? <TroquelMaleta client:visible /> : null}
+{componente_jsx === 'TroquelCajaB1' ? <TroquelCajaB1 client:visible /> : null}
+{
+	componente_jsx === 'TroquelCaballete' ? (
+		<TroquelCaballete client:visible />
+	) : null
+}
+{componente_jsx === 'Troquel4e0066' ? <Troquel4e0066 client:visible /> : null}
+{componente_jsx === 'Troquel1p0391' ? <Troquel1p0391 client:visible /> : null}
+{
+	componente_jsx === 'DecoracionArbol' ? (
+		<DecoracionArbol client:visible />
+	) : null
+}
+../three/Troquel1p0391.old

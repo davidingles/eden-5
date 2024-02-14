@@ -1,0 +1,32 @@
+---
+import TextoAnimadoTelefono from '../botones-sliders/TextoAnimadoTelefono.astro'
+import BtnAdelante from '../botones-sliders/BtnAdelante.astro'
+import { Image } from 'astro:assets'
+---
+
+<div class='sm:w-1/3 w-full flex flex-col items-center'>
+	<div class='mb-10 lg:w-[444px] md:w-[333px] w-[444px] flex items-center'>
+		<Image
+			src='/svg/log.svg'
+			width={88}
+			height={88}
+			alt=''
+		/>
+	</div>
+
+	<div class='logo'>
+		<div class='flex justify-center mb-4'>
+			<TextoAnimadoTelefono />
+		</div>
+		<p class='tipografia md:max-w-3xl indent-10 text-xl font-light text-left'>
+			Empresa dedicada a la fabricación de envases y embalajes de cartón
+			ondulado y otros productos relacionados con el embalaje. Cajas, bandejas,
+			estuches, expositores, separadores, plancha paletizaje, etc.
+		</p>
+		<div class='mt-4 mb-60'>
+			<a href='/catalogo'>
+				<BtnAdelante />
+			</a>
+		</div>
+	</div>
+</div>

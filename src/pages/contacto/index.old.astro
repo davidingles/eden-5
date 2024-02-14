@@ -1,0 +1,140 @@
+---
+import Layout from '@/layouts/Layout.astro'
+import TextoAnimadoTelefono from '@/components/botones-sliders/TextoAnimadoTelefono.astro'
+import { NosotrosCarruselReact } from '@/components/NosotrosCarruselReact'
+---
+
+<Layout title='Contactos de la Auxiliar'>
+	<div
+		class='con rounded-lg m-auto w-full flex flex-col h-full justify-center items-center p-2'
+	>
+		<span class='contacta'> Llámanos al teléfono:</span>
+		<span class='m-4'>
+			<TextoAnimadoTelefono />
+		</span>
+		<div
+			id='contactooo'
+			class='flex flex-col h-full gap-8 w-[30%] sm:w-[80%] md:w-[80%] lg:w-[70%] xl:w-[50%]'
+		>
+			<div class=''>
+				<span class='contacta'>
+					O contacta con el departamente que necesites o encuentranos en el
+					mapa:
+				</span>
+			</div>
+			<div
+				class='bodyIndex p-2 rounded-lg flex flex-1 h-full justify-center items-center'
+			>
+				<NosotrosCarruselReact client:load />
+			</div>
+			<!-- <div
+				class='grid grid-cols-1 m-auto md:grid-cols-2 md:gap-4 lg:grid-cols-3 lg:gap-10'
+			>
+				<a
+					id='scroll-to-camion'
+					href='#admi'
+				>
+					<TarjetasMario
+						telefono='686 944 932'
+						jefes='administracion'
+						departamento='Admin'
+					/>
+				</a>
+				<a
+					id='scroll-to-camion2'
+					href='#cajas'
+				>
+					<TarjetasMario
+						telefono='657 803 024'
+						jefes='ventas'
+						departamento='Ventas'
+					/>
+				</a>
+				<a
+					id='scroll-to-camion3'
+					href='#miVideo'
+				>
+					<TarjetasMario
+						telefono='657 803 024'
+						jefes='logistica'
+						departamento='Logística'
+					/>
+				</a>
+				<a
+					id='scroll-to-camion4'
+					href='#diseñando'
+				>
+					<TarjetasMario
+						telefono='657 803 024'
+						jefes='diseño'
+						departamento='Diseño'
+					/>
+				</a>
+				<a
+					id='scroll-to-camion5'
+					href='https://goo.gl/maps/aF9KwAe88DQVdV427'
+					target='_blank'
+				>
+					<TarjetasMario
+						telefono='968 693 575'
+						jefes='maps'
+					/>
+				</a>
+			</div> -->
+		</div>
+	</div>
+	<div class='flex flex-row items-center'>
+		<span class='block w-[55%] bordeRojo p-4'>
+			Impresora flexográfica de 3 cuerpos...
+		</span>
+	</div>
+
+	<!-- <Chofer
+		id='miVideo'
+		src='/videos/camion.mp4'
+		texto='Nuestra flota de vehiculos nos permite realizar entregas en un plazo de 24 horas en la provincia de Murcia y en un plazo de 48 horas en el resto de la peninsula.'
+		responsable='Ángel Latorre logistica@laauxiliar.es 657 803 024'
+	/>
+
+	<Chofer
+		id='cajas'
+		src='/videos/cajas-en-movimiento.mp4'
+		texto='Disponemos de una estructura de maquinas y medios de vanguardia que hace posible ofrecer un buen servicio y calidad en nuestros productos.'
+		responsable='Miguel Ángel Latorre ventas@laauxiliar.es 686 944 933'
+	/>
+
+	<Chofer
+		id='admi'
+		src='/videos/admi.mp4'
+		texto='Contamos con un gran equipo humano con una experiencia de más de dos décadas en el sector del manipulado de cartón ondulado.'
+		responsable='Jesús Latorre administracion@laauxiliar.es 686 944 932'
+	/>
+
+	<Chofer
+		id='diseñando'
+		src='/videos/diseñando.mp4'
+		texto='Diseñamos todo lo relacionado con nuestros productos, tanto en diseño gráfico como en sistemas de envases y embalajes.'
+		responsable='Vicente Latorre dg@laauxiliar.es 657 842 909'
+	/> -->
+</Layout>
+
+<style>
+	.con {
+		background-color: #202020;
+	}
+	:global(.light) .con {
+		background-color: #fff;
+	}
+	:global(.light) .contacta {
+		color: var(--auxi2);
+	}
+	a {
+		scroll-behavior: smooth;
+	}
+	html {
+		scroll-behavior: smooth;
+	}
+	:global(html) {
+		scroll-behavior: smooth;
+	}
+</style>

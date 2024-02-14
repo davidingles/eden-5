@@ -1,0 +1,51 @@
+---
+export interface Props {
+	id: string
+	src: string
+	texto: string
+	responsable: string
+}
+
+const { id, src, texto, responsable } = Astro.props
+---
+
+<section
+	id={id}
+	class='min-h-screen flex flex-col items-center justify-center bordeRojo m-2 rounded-lg pb-[333px]'
+>
+	<div class='camion gap-12 w-2/3 text-gray-100 mb-4 flex justify-center mt-11'>
+		<p class='tipografia'>
+			{texto}
+		</p>
+		<p class='tipo'>
+			{responsable}
+		</p>
+	</div>
+
+	<video
+		class='brightness-50 object-cover rounded-lg flex flex-1'
+		muted
+		autoplay
+		loop
+		src={src}
+	>
+	</video>
+</section>
+
+<style>
+	:global(.light) .camion {
+		color: #202020;
+	}
+	.tipo {
+		color: var(--auxi1);
+	}
+	:global(.light) .tipo {
+		color: var(--auxi2);
+	}
+	.tipografia {
+		font-family: Helvetica, Arial, sans-serif;
+	}
+	section {
+		scroll-behavior: smooth;
+	}
+</style>

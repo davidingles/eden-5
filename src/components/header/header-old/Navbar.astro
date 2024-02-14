@@ -1,0 +1,52 @@
+---
+interface Props {
+	title?: string[]
+	link?: string[]
+}
+
+const { title, link } = Astro.props
+---
+
+<div
+	class='flex gap-8 justify-center sm:jutify-end mt-1 sm:mt-2 items-center tipo text-2xl sm:text-base md:text-lg whitespace-nowrap'
+>
+	<!-- This code uses Tailwind CSS to apply different styles based on screen size. The classes used are prefixed with "sm:", "md:", "lg:", and "xl:", which correspond to small, medium, large, and extra-large screens, respectively. These classes can be used to adjust the layout and appearance of elements based on the user's device. -->
+	{
+		title.map((item, index) => {
+			return (
+				<div class='uno'>
+					<a
+						class='a'
+						href={link[index]}
+					>
+						{item}
+					</a>
+				</div>
+			)
+		})
+	}
+</div>
+
+<style>
+	.tipo {
+		font-family: var(--tipo-erasdemi);
+	}
+
+	.a:hover {
+		text-decoration: none;
+		animation-name: under;
+		animation-fill-mode: forwards;
+	}
+
+	@keyframes under {
+		0% {
+			text-decoration: none;
+		}
+		100% {
+			text-decoration: underline;
+			text-decoration-color: var(--auxiliar1);
+			text-underline-offset: 0.2rem;
+			text-decoration-thickness: 2px;
+		}
+	}
+</style>

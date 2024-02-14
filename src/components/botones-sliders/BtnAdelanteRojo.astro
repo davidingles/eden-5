@@ -1,0 +1,56 @@
+---
+interface Props {
+	menus: string
+}
+const { menus } = Astro.props
+---
+
+<!-- <button class={ruta === '/servicios' ? 'bg-red' : ''}> -->
+<button>
+	<span>{menus}</span>
+</button>
+
+<style>
+	button {
+		display: inline-block;
+		color: #ffffff;
+		text-align: center;
+		width: 150px;
+		transition: all 0.5s;
+		cursor: pointer;
+		padding: 5px;
+	}
+	:global(.light) button {
+		color: #f0f;
+	}
+
+	button span {
+		cursor: pointer;
+		display: inline-block;
+		position: relative;
+		transition: 0.5s;
+	}
+
+	button span:after {
+		content: '»';
+		position: absolute;
+		opacity: 0;
+		top: 0;
+		right: -15px;
+		transition: 0.5s;
+	}
+
+	button:hover span {
+		padding-right: 15px;
+	}
+
+	button:hover span:after {
+		opacity: 1;
+		right: 0;
+	}
+</style>
+
+<!-- <script :client>
+	const boton = document.querySelector('button')
+	boton.style.backgroundColor = 'red'
+</script> -->

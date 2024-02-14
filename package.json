@@ -1,0 +1,53 @@
+{
+  "name": "eden-2",
+  "type": "module",
+  "version": "0.0.1",
+  "scripts": {
+    "dev": "astro dev",
+    "start": "astro dev",
+    "build": "astro build",
+    "preview": "astro preview",
+    "astro": "astro"
+  },
+  "dependencies": {
+    "@astrojs/react": "^3.0.7",
+    "@astrojs/tailwind": "^5.0.3",
+    "@astrojs/vercel": "^6.1.0",
+    "@react-three/drei": "^9.89.0",
+    "@react-three/fiber": "^8.15.11",
+    "@types/three": "^0.158.3",
+    "astro": "^4.0.5",
+    "react-image-gallery": "^1.3.0",
+    "styled-components": "^6.1.1",
+    "tailwindcss": "^3.3.5",
+    "three": "^0.160.0"
+  },
+  "devDependencies": {
+    "@types/react-image-gallery": "^1.2.4",
+    "babel-plugin-styled-components": "^2.1.4",
+    "leva": "^0.9.35",
+    "standard": "^17.1.0"
+  },
+  "eslintConfig": {
+    "extends": "standard",
+    "rules": {
+      "semi": [
+        "error",
+        "never"
+      ],
+      "no-multiple-empty-lines": [
+        "error",
+        {
+          "max": 2
+        },
+        {
+          "maxEOF": 0
+        }
+      ],
+      "indent": [
+        "error",
+        4
+      ]
+    }
+  }
+}

@@ -1,0 +1,26 @@
+---
+import AsideMenu from '@/components/AsideMenu.astro'
+import FooterMenu from '@/components/footer/FooterMenu.astro'
+import Footer from '@/components/footer/footer-old/Footer.astro'
+import HeaderMenu from '@/components/header/HeaderMenu.astro'
+---
+
+<main class='flex flex-col w-full'>
+	<div class=''>
+		<HeaderMenu />
+	</div>
+	<div class=''>
+		<AsideMenu />
+	</div>
+	<div class=''>
+		<slot />
+	</div>
+	<div class=''>
+		<FooterMenu />
+	</div>
+	<div class=''>
+		<Footer />
+	</div>
+</main>
+
+<style></style>

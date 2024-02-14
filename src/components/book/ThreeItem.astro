@@ -1,0 +1,18 @@
+---
+export interface Props {
+    id: string;
+    title: string;
+    img: string;
+    three?: string;
+}
+
+const { three } = Astro.props;
+---
+
+<div href=`/${id}`>
+    <img 
+        class="aspect-[500/500] object-contain"
+        src=`${img}` 
+        alt=`${title}`
+    >
+</div>

@@ -1,0 +1,85 @@
+---
+export interface Props {
+	departamento?: string
+	telefono: string
+	jefes:
+		| 'vicente'
+		| 'miguelAngel'
+		| 'Jesus'
+		| 'david'
+		| 'Angelin'
+		| 'diseño'
+		| 'logistica'
+		| 'ventas'
+		| 'administracion'
+		| 'maps'
+}
+const { telefono, jefes, departamento } = Astro.props
+---
+
+<article class='relative w-[auto] h-auto transition-all duration-300 ease'>
+	<img
+		class=''
+		src=`./img/jefes/${jefes}.png`
+		alt='foto del jefe'
+	/>
+	<span
+		class='col-tex bg-white absolute top-0 left-0 right-0 text-center text-xl m-auto whitespace-nowrap'
+		>{departamento}</span
+	>
+	<span
+		class='color-texto-david text-[var(--auxiliar2)] absolute text-center font-bold bottom-0 left-0 right-0 m-auto whitespace-nowrap opacity-0 transform translate-y-20 transition-all duration-300 ease text-2xl'
+		>{telefono}</span
+	>
+</article>
+
+<style>
+	.col-tex {
+		color: var(--auxi1);
+	}
+	:global(.light) .col-tex {
+		color: var(--auxi2);
+	}
+	.color-texto-david {
+		color: var(--auxi1);
+	}
+	:global(.light) .color-texto-david {
+		color: var(--auxi2);
+	}
+	article img {
+		object-fit: cover;
+		width: 100%;
+		box-shadow: 1px 1px 5px 0px rgba(0, 0, 0, 0.5);
+		border-radius: 1rem;
+	}
+
+	article:hover {
+		transform: perspective(222px) rotateX(10deg) translateY(-16%) translateZ(0);
+	}
+
+	article:hover span {
+		opacity: 1;
+		transform: translateY(-22%);
+	}
+
+	article::before {
+		content: '';
+		position: absolute;
+		bottom: 0;
+		height: 100%;
+		width: 100%;
+		border-radius: 1rem;
+		box-shadow: 1px 22px 22px -15px rgba(0, 0, 0, 0.5);
+		background-image: linear-gradient(
+			to bottom,
+			transparent 10%,
+			rgba(255, 255, 255, 0.5) 50%,
+			rgba(255, 255, 255) 95%
+		);
+		opacity: 0;
+		transition: all 0.3s ease;
+	}
+	article:hover::before {
+		opacity: 1;
+	}
+</style>

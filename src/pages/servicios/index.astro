@@ -1,0 +1,30 @@
+---
+import Layout from '@/layouts/Layout.astro'
+import { ServiciosCarruselReact } from '@/components/ServiciosCarruselReact.jsx'
+---
+
+<Layout title='Servicios de la Auxiliar'>
+	<div class='bg-white flex flex-col justify-center items-center'>
+		<!-- CARRUSEL===================================== -->
+		<ServiciosCarruselReact client:load />
+	</div>
+</Layout>
+
+<style>
+	@keyframes spin {
+		0% {
+			transform: rotateY(0deg);
+		}
+		100% {
+			transform: rotateY(1turn);
+		}
+	}
+
+	.spin {
+		animation: spin 6s linear infinite;
+	}
+	:global(.light) .numero {
+		color: rgb(55, 55, 55);
+		background-color: rgb(247, 215, 87);
+	}
+</style>
