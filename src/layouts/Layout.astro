@@ -3,6 +3,7 @@ import AsideMenu from '@/components/AsideMenu.astro'
 import FooterMenu from '@/components/footer/FooterMenu.astro'
 import Footer from '@/components/footer/footer-old/Footer.astro'
 import HeaderMenu from '@/components/header/HeaderMenu.astro'
+import NavbarMovil from '@/components/NavbarMovil.astro'
 import MenuReact from '@/components/menuReact'
 interface Props {
 	title: string
@@ -40,6 +41,10 @@ const { title } = Astro.props
 		<div class='asideMenu p-2 [grid-area:aside] flex flex-col'>
 			<AsideMenu />
 		</div>
+		<div class='navbar__movil [grid-area:aside]'>
+			<NavbarMovil />
+		</div>
+
 		<!-- //!!!: ASIDE ================================= -->
 		<!--  -->
 		<!--  -->
@@ -121,8 +126,14 @@ const { title } = Astro.props
 				grid-template-rows: 222px 1fr auto auto;
 			}
 			.asideMenu {
-				border: solid 3px red;
-				height: auto;
+				display: none;
+			}
+		}
+		@media screen and (min-width: 769px) {
+			.navbar__movil {
+				display: none;
+				position: relative;
+				z-index: 99;
 			}
 		}
 

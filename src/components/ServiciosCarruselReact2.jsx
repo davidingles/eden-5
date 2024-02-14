@@ -43,7 +43,7 @@ export function ServiciosCarruselReact2({ cielo2, nave, lunes, nav, video, naveT
             className={`${estilos.marco} border border-white rounded-[1rem] flex`}
             style={{ boxShadow: '2px 2px 11px 2px rgb(0 0 0 / 20%)' }}>
             {/* BOTONES ABSOLUTE ============================== */}
-            <div className='absolute -translate-x-[50%] -translate-y-[50%]  z-40 top-1/2 left-1/2 sm:hidden flex flex-row  p-11'>
+            <div className='absolute -translate-x-[50%] -translate-y-[50%]  z-10 top-1/2 left-1/2 sm:hidden flex flex-row  p-11'>
               <button className='text-white backdrop-blur-sm border border-white  px-2 py-11 text-6xl h-11 bg-white bg-opacity-30 justify-center items-center flex flex-1 rounded-xl' onClick={() => { setAutoPlay(false); previous() }}>{'<'}</button>
               <button className='text-white m-11 invisible flex flex-1 text-4xl justify-center' onClick={() => { setAutoPlay(!autoPlay) }} > {autoPlay === true ? 'STOP' : 'PLAY'}</button>
               <button className='text-white border px-2 border-white backdrop-blur-sm py-11 text-6xl bg-white bg-opacity-30 justify-center items-center rounded-xl h-11 flex flex-1 ' onClick={() => { setAutoPlay(false); next() }}>{'>'}</button>

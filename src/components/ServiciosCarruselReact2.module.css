@@ -84,6 +84,7 @@
   width: 333px;
   height: 333px;
   position: relative;
+  z-index: 5;
 }
 
 /* .thumbnailContainer {} */
