@@ -1,5 +1,10 @@
 ---
 import Logo from '@/components/icons/LogoAuxCompleto.astro'
+import IconHome from '@/components/icons/IconHome___.astro'
+import IconNosotros from '@/components/icons/IconNosotros.astro'
+import IconServicios from '@/components/icons/IconServices.astro'
+import IconContact from './icons/IconContact.astro'
+import IconCatalogo from './icons/IconCatalogo.astro'
 ---
 
 <nav class='nav'>
@@ -38,10 +43,13 @@ import Logo from '@/components/icons/LogoAuxCompleto.astro'
 					href='/'
 					class='dropdown__link'
 				>
-					<img
+					<div class='dropdown__icon'>
+						<IconHome />
+					</div>
+					<!-- <img
 						src='./assets/house.svg'
 						class='dropdown__icon'
-					/>
+					/> -->
 					<span class='dropdown__span'>Inicio</span>
 				</a>
 			</li>
@@ -51,10 +59,13 @@ import Logo from '@/components/icons/LogoAuxCompleto.astro'
 					href='/nosotros'
 					class='dropdown__link'
 				>
-					<img
+					<div>
+						<IconNosotros />
+					</div>
+					<!-- <img
 						src='./assets/projects.svg'
 						class='dropdown__icon'
-					/>
+					/> -->
 					<span class='dropdown__span'>Nosotros</span>
 				</a>
 			</li>
@@ -63,10 +74,13 @@ import Logo from '@/components/icons/LogoAuxCompleto.astro'
 					href='/servicios2'
 					class='dropdown__link'
 				>
-					<img
+					<div>
+						<IconServicios />
+					</div>
+					<!-- <img
 						src='./assets/projects.svg'
 						class='dropdown__icon'
-					/>
+					/> -->
 					<span class='dropdown__span'>Servicios</span>
 				</a>
 			</li>
@@ -76,10 +90,13 @@ import Logo from '@/components/icons/LogoAuxCompleto.astro'
 					href='/contacto'
 					class='dropdown__link'
 				>
-					<img
+					<div>
+						<IconContact />
+					</div>
+					<!-- <img
 						src='./assets/email.svg'
 						class='dropdown__icon'
-					/>
+					/> -->
 					<span class='dropdown__span'>Contacto</span>
 					<img
 						src='./assets/down.svg'
@@ -138,10 +155,13 @@ import Logo from '@/components/icons/LogoAuxCompleto.astro'
 					href='/catalogo'
 					class='dropdown__link'
 				>
-					<img
+					<div>
+						<IconCatalogo />
+					</div>
+					<!-- <img
 						src='./assets/help.svg'
 						class='dropdown__icon'
-					/>
+					/> -->
 					<span class='dropdown__span'>Catálogo</span>
 				</a>
 			</li>
