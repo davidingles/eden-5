@@ -35,57 +35,57 @@ export function ServiciosCarruselReact2({ cielo2, nave, lunes, nav, video, naveT
 
   return (
     <>
-      <div className='boxy flex flex-col items-center justify-center overflow-hidden'>
-
-        {/* IMAGEN GRANDE================================== */}
-        <div className={`${estilos.caja}`}>
-          <div
-            className={`${estilos.marco} border border-white rounded-[1rem] flex`}
-            style={{ boxShadow: '2px 2px 11px 2px rgb(0 0 0 / 20%)' }}>
-            {/* BOTONES ABSOLUTE ============================== */}
-            <div className='absolute -translate-x-[50%] -translate-y-[50%]  z-10 top-1/2 left-1/2 sm:hidden flex flex-row  p-11'>
-              <button className='text-white backdrop-blur-sm border border-white  px-2 py-11 text-6xl h-11 bg-white bg-opacity-30 justify-center items-center flex flex-1 rounded-xl' onClick={() => { setAutoPlay(false); previous() }}>{'<'}</button>
-              <button className='text-white m-11 invisible flex flex-1 text-4xl justify-center' onClick={() => { setAutoPlay(!autoPlay) }} > {autoPlay === true ? 'STOP' : 'PLAY'}</button>
-              <button className='text-white border px-2 border-white backdrop-blur-sm py-11 text-6xl bg-white bg-opacity-30 justify-center items-center rounded-xl h-11 flex flex-1 ' onClick={() => { setAutoPlay(false); next() }}>{'>'}</button>
-            </div >
-            <video
-              poster={imagenSeleccionada}
-              autoPlay
-              loop
-              muted
-              onLoad={() => setLoaded(true)}
-              src={imagenSeleccionada}
-              style={{ objectFit: 'cover', width: '100%', height: '100%', borderRadius: '1rem' }}
-              alt={imagenSeleccionada}
-            />
-          </div>
-          <p className={`${estilos.texto} p-8 m-auto text-lg text-balance overflow-y-auto`}>{textos && textos[indiceSeleccionado]}{textos2 && textos2[claves[indiceSeleccionado]].dep}<br /><p className='whitespace-nowrap'>{textos2 && textos2[claves[indiceSeleccionado]].email}</p><p className='whitespace-nowrap'>{textos2 && textos2[claves[indiceSeleccionado]].nombre}</p><p className='whitespace-nowrap'>{textos2 && textos2[claves[indiceSeleccionado]].telefono}</p></p>
-        </div>
-
-
-        {/* BOTONES ================================== */}
-        <div className='hidden sm:flex flex-row p-4 m-auto gap-4'>
-          <button className={`${estilos.btn} `} onClick={() => { setAutoPlay(false); previous() }}>{'<'}</button>
-          <button className={`${estilos.btn}`} onClick={() => { setAutoPlay(!autoPlay) }} > {autoPlay === true ? 'STOP' : 'PLAY'}</button>
-          <button className={`${estilos.btn} btn`} onClick={() => { setAutoPlay(false); next() }}>{'>'}</button>
-        </div >
-
-
-        {/* //THUMBANILS ================================== */}
-        <div className={`${estilos.thumbnailContainer} flex flex-row gap-4`}>
-          {imagenes2.map((imagen, index) => (
-            <div className='flex ' key={index}>
-              <img
-                className={`object-cover m-2 md:m-0 w-[111px] h-[111px] rounded-lg estilos.thumbnail cursor-pointer ${index !== indiceSeleccionado ? estilos.thumbnail2 : ""}`}
-                src={imagen}
-                alt="fabrica"
-                onClick={() => { setImagenSeleccionada(imagenes[index]); setIndiceSeleccionado(index); setAutoPlay(false) }} />
-
-
+      <main className={`${estilos.main}`}>
+        <div className={`${estilos.boxy}`}>
+          {/* IMAGEN GRANDE================================== */}
+          <div className={`${estilos.caja}`}>
+            <div
+              className={`${estilos.marco} border border-white rounded-[1rem] flex`}
+              style={{ boxShadow: '2px 2px 11px 2px rgb(0 0 0 / 20%)' }}>
+              {/* BOTONES ABSOLUTE ============================== */}
+              <video
+                poster={imagenSeleccionada}
+                autoPlay
+                loop
+                muted
+                onLoad={() => setLoaded(true)}
+                src={imagenSeleccionada}
+                style={{ objectFit: 'cover', width: '100%', height: '100%', borderRadius: '1rem' }}
+                alt={imagenSeleccionada}
+              />
             </div>
-          ))}
+              <div className={`${estilos.botones__absolute}`}>
+                <button className='text-white backdrop-blur-sm border border-white  px-2 py-11 text-6xl h-11 bg-white bg-opacity-30 justify-center items-center flex flex-1 rounded-xl' onClick={() => { setAutoPlay(false); previous() }}>{'<'}</button>
+                <button className='text-white m-11 invisible flex flex-1 text-4xl justify-center' onClick={() => { setAutoPlay(!autoPlay) }} > {autoPlay === true ? 'STOP' : 'PLAY'}</button>
+                <button className='text-white border px-2 border-white backdrop-blur-sm py-11 text-6xl bg-white bg-opacity-30 justify-center items-center rounded-xl h-11 flex flex-1 ' onClick={() => { setAutoPlay(false); next() }}>{'>'}</button>
+              </div >
+          </div>
+          {/* BOTONES ================================== */}
+          <div className='flex flex-col justify-center'>
+            <div className={`${estilos.botones__uno}`}>
+              <button className={`${estilos.btn} `} onClick={() => { setAutoPlay(false); previous() }}>{'<'}</button>
+              <button className={`${estilos.btn}`} onClick={() => { setAutoPlay(!autoPlay) }} > {autoPlay === true ? 'STOP' : 'PLAY'}</button>
+              <button className={`${estilos.btn} btn`} onClick={() => { setAutoPlay(false); next() }}>{'>'}</button>
+            </div >
+            {/* //THUMBANILS ================================== */}
+            <div className={`${estilos.thumbnailContainer} flex flex-row gap-4`}>
+              {imagenes2.map((imagen, index) => (
+                <div className='flex ' key={index}>
+                  <img
+                    className={`object-cover m-2 md:m-0 w-[111px] h-[111px] rounded-lg estilos.thumbnail cursor-pointer ${index !== indiceSeleccionado ? estilos.thumbnail2 : ""}`}
+                    src={imagen}
+                    alt="fabrica"
+                    onClick={() => { setImagenSeleccionada(imagenes[index]); setIndiceSeleccionado(index); setAutoPlay(false) }} />
+                </div>
+              ))}
+            </div>
+          </div>
+        </div >
+        {/* // TEXTOS =============================== */}
+        <div className={`${estilos.textazo}`}>
+              <p className={`${estilos.texto} text-lg text-balance overflow-y-auto px-4`}>{textos && textos[indiceSeleccionado]}{textos2 && textos2[claves[indiceSeleccionado]].dep}<br /><p className='whitespace-nowrap'>{textos2 && textos2[claves[indiceSeleccionado]].email}</p><p className='whitespace-nowrap'>{textos2 && textos2[claves[indiceSeleccionado]].nombre}</p><p className='whitespace-nowrap'>{textos2 && textos2[claves[indiceSeleccionado]].telefono}</p></p>
         </div>
-      </div >
+      </main>
     </>
   );
 }

@@ -1,6 +1,11 @@
 ---
 import BookItem from './BookItem.astro'
 import { books } from '../../data/books.js'
+import BtnEstrellasEstuches from '../../components/botones-sliders/BtnEstrellasEstuches.astro'
+import BtnEstrellasExpositores from '../../components/botones-sliders/BtnEstrellasExpositores.astro'
+import BtnEstrellasCajas from '../../components/botones-sliders/BtnEstrellasCajas.astro'
+
+
 ---
 
 <script is:inline>
@@ -22,19 +27,23 @@ import { books } from '../../data/books.js'
 		class='opts p-4'
 		href='#estuches'
 	>
-		Estuches</a
+		<BtnEstrellasEstuches/>
+	</a
 	>
 	<a
 		class='opts p-4'
 		href='#cajas'
 	>
-		Cajas y Bandejas</a
+	<BtnEstrellasCajas/>
+		</a
 	>
 	<a
 		class='opts p-4'
 		href='#expositores'
 	>
-		Expositores y Otros</a
+	<BtnEstrellasExpositores/>
+
+		</a
 	>
 </div>
 <div
@@ -103,6 +112,7 @@ import { books } from '../../data/books.js'
 	}
 </div>
 <style>
+	
 	.card {
 		width: auto;
 		height: auto;
