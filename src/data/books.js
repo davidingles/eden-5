@@ -16,6 +16,22 @@ export const books = [
 		scaleVideo: 1.5
 
 	},
+	{
+		id: 'cajaB1',
+		title: 'cajaB1',
+		img: '/catalogo/cajaB1.png',
+		opinion: 'Bandeja automontable acotada.',
+		author: 'David Inglés',
+		categoria: 'Cajas',
+		tamaño: 3,
+		escala: .8,
+		posicion: .3,
+		glbSource: '/gltf/cajaB1.glb',
+		three: '1P0221',
+		video: '/videos/montajes/caja.webm',
+		scaleVideo: 1.5
+
+	},
 	// {
 	// 	id: 'EstucheConAsas',
 	// 	title: 'Estuche con asas',
